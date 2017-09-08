@@ -11,6 +11,8 @@ object BetweenTwoSets extends App {
   val bLength = sc.nextInt
   val a = (1 to aLength).map(_ => sc.nextInt)
   val b = (1 to bLength).map(_ => sc.nextInt)
+  sc.close()
+
   val numbersBetween = (a.max to b.min).map(x => {
     if (satisfiesA(x, a) && satisfiesB(x, b)) 1
     else 0
